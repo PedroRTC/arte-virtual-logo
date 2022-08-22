@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height:300px ;
+   transition: all 0.5s;
+   animation: animate 1s infinite linear;
+   cursor: pointer;
+   border-radius: 50%;
+   
+}
+
+.main::before{
+    content: "";
+    position: absolute;
+    background-image:linear-gradient(45deg,#F5D031,#FB2796,#7AD0E7,#F5D031,#FB2796,#7AD0E7) ;
+    z-index: -1;
+    width: 300px;
+    height: 300px;
+    animation: animate 1s infinite linear;
+    filter: blur(15px);
+    opacity:0;
+    transition: all 0.5s;
+    border-radius: 50%;
+
+
+}
+
+.main:hover::before,
+.main:hover{
+    opacity:1;
+    background-image:linear-gradient(45deg,#F5D031,#FB2796,#7AD0E7,#F5D031,#FB2796,#7AD0E7) ;
+}
+
+
+
+
+@keyframes animate{
+    0%{
+        background-position: 300px ;  
+    }
+    100%{
+        background-position: 0px ;
+    }
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    width: 295px;
+    height: 295px;
+    color: white;
+    background-color:black;
+    z-index:1;
+    border-radius: 50%;
+}
+
+h1{
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    font-size: 50pt;
+    letter-spacing: 2px;
+    line-height: 50px;
+}   
+
+h2{
+    text-align: center;
+    display: inline-block;
+    font-size: 10pt;
+    font-family: 'Prompt', sans-serif;
+    letter-spacing: 20px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,rgba(0, 0, 0, 0.712)) ;
+    padding-left: 20px;
+
+    
+}
+
+
+.vir{
+  color: #F5D031 ; 
+  
+}
+
+.tu{
+    color: #FB2796;
+}
+
+.al{
+    color: #7AD0E7;
+}
